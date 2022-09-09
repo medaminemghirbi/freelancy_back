@@ -10,6 +10,7 @@ class AdminController < ApplicationController
   end
 
   def countAllFreelancer
+    #home count for freelancer
     @education = Education.where(user_id: params[:user_id]).count
     @experience = Experience.where(user_id: params[:user_id]).count
     @language = FreelancerLanguage.where(user_id: params[:user_id]).count
