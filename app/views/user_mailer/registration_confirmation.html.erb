@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to Freelancy.com, Hi <%= @user.lastname %></h1>
+    <p>
+      You have successfully signed up to Freelancy.com,
+      your username is: <%= @user.email %>.<br>
+    </p>
+    <p>
+      To login to the site, just follow this link: <a href="<%= confirm_email_registration_url(@user.confirm_token) %>">click to confirm Inscription</a>.
+    </p>
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
