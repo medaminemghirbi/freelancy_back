@@ -41,7 +41,7 @@ class MissionsController < ApplicationController
   def update
     @ids = JSON.parse(params[:language_id], object_class: OpenStruct).pluck(:id).uniq
     @mission = Mission.find(params[:id])
-		byebug
+		
     if @mission.update(post_params2)
 			MissionLanguage.where(mission_id: @mission.id).delete_all
 
